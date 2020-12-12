@@ -127,6 +127,19 @@ toolhelp\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\toolhelp.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\toolhelp.dir\build
 .PHONY : toolhelp\fast
 
+#=============================================================================
+# Target rules for targets named wts
+
+# Build rule for target.
+wts: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) wts
+.PHONY : wts
+
+# fast build rule for target.
+wts\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\wts.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\wts.dir\build
+.PHONY : wts\fast
+
 process-enumeration\toolhelp.obj: process-enumeration\toolhelp.c.obj
 
 .PHONY : process-enumeration\toolhelp.obj
@@ -154,6 +167,33 @@ process-enumeration\toolhelp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\toolhelp.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\toolhelp.dir\process-enumeration\toolhelp.c.s
 .PHONY : process-enumeration\toolhelp.c.s
 
+process-enumeration\wts.obj: process-enumeration\wts.c.obj
+
+.PHONY : process-enumeration\wts.obj
+
+# target to build an object file
+process-enumeration\wts.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\wts.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\wts.dir\process-enumeration\wts.c.obj
+.PHONY : process-enumeration\wts.c.obj
+
+process-enumeration\wts.i: process-enumeration\wts.c.i
+
+.PHONY : process-enumeration\wts.i
+
+# target to preprocess a source file
+process-enumeration\wts.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\wts.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\wts.dir\process-enumeration\wts.c.i
+.PHONY : process-enumeration\wts.c.i
+
+process-enumeration\wts.s: process-enumeration\wts.c.s
+
+.PHONY : process-enumeration\wts.s
+
+# target to generate assembly for a file
+process-enumeration\wts.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\wts.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\wts.dir\process-enumeration\wts.c.s
+.PHONY : process-enumeration\wts.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -163,9 +203,13 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... toolhelp
+	@echo ... wts
 	@echo ... process-enumeration/toolhelp.obj
 	@echo ... process-enumeration/toolhelp.i
 	@echo ... process-enumeration/toolhelp.s
+	@echo ... process-enumeration/wts.obj
+	@echo ... process-enumeration/wts.i
+	@echo ... process-enumeration/wts.s
 .PHONY : help
 
 

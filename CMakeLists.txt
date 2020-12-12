@@ -5,3 +5,4 @@ set(CMAKE_C_STANDARD 11)
 
 #add_executable(Windows_Process_Injection main.c)
 add_executable(toolhelp process-enumeration/toolhelp.c)
+add_executable(wts process-enumeration/wts.c)
