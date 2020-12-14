@@ -40,10 +40,10 @@ int main(int argc, const char *argv[]) {
     if(!WriteProcessMemory(hProcess, buffer, argv[2], strlen(argv[2]), NULL)) {
         return Error("Failed to write .dll in the target process memory!\n");
     }
-
+    printf("%d", pid);
     HANDLE hThread = CreateRemoteThread(hProcess, NULL, 0,
                                         (LPTHREAD_START_ROUTINE)
-                                        GetProcAddress(GetModuleHandle(L"kernel32"),"LoadLibraryW"),
+                                        GetProcAddress(GetModuleHandle(L"kernel32"),"LoadLibraryA"),
                                         buffer, 0, NULL);
 
     if (!hThread) {
