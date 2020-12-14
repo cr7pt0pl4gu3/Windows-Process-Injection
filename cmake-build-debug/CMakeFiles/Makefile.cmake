@@ -44,4 +44,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/toolhelp.dir/DependInfo.cmake"
   "CMakeFiles/wts.dir/DependInfo.cmake"
+  "CMakeFiles/remote-thread.dir/DependInfo.cmake"
   )

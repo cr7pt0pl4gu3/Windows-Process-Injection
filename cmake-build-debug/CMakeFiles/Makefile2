@@ -59,6 +59,7 @@ CMAKE_BINARY_DIR = C:\Users\nabab\Documents\GitHub\Windows-Process-Injection\cma
 # The main recursive "all" target.
 all: CMakeFiles\toolhelp.dir\all
 all: CMakeFiles\wts.dir\all
+all: CMakeFiles\remote-thread.dir\all
 
 .PHONY : all
 
@@ -70,6 +71,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles\toolhelp.dir\clean
 clean: CMakeFiles\wts.dir\clean
+clean: CMakeFiles\remote-thread.dir\clean
 
 .PHONY : clean
 
@@ -80,7 +82,7 @@ clean: CMakeFiles\wts.dir\clean
 CMakeFiles\toolhelp.dir\all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\toolhelp.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\toolhelp.dir\depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\toolhelp.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\toolhelp.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\nabab\Documents\GitHub\Windows-Process-Injection\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target toolhelp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\nabab\Documents\GitHub\Windows-Process-Injection\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target toolhelp"
 .PHONY : CMakeFiles\toolhelp.dir\all
 
 # Build rule for subdir invocation for target.
@@ -107,7 +109,7 @@ CMakeFiles\toolhelp.dir\clean:
 CMakeFiles\wts.dir\all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\wts.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\wts.dir\depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\wts.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\wts.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\nabab\Documents\GitHub\Windows-Process-Injection\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target wts"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\nabab\Documents\GitHub\Windows-Process-Injection\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target wts"
 .PHONY : CMakeFiles\wts.dir\all
 
 # Build rule for subdir invocation for target.
@@ -126,6 +128,33 @@ wts: CMakeFiles\wts.dir\rule
 CMakeFiles\wts.dir\clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\wts.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\wts.dir\clean
 .PHONY : CMakeFiles\wts.dir\clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/remote-thread.dir
+
+# All Build rule for target.
+CMakeFiles\remote-thread.dir\all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\remote-thread.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\remote-thread.dir\depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\remote-thread.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\remote-thread.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\nabab\Documents\GitHub\Windows-Process-Injection\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target remote-thread"
+.PHONY : CMakeFiles\remote-thread.dir\all
+
+# Build rule for subdir invocation for target.
+CMakeFiles\remote-thread.dir\rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\nabab\Documents\GitHub\Windows-Process-Injection\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) CMakeFiles\remote-thread.dir\all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\nabab\Documents\GitHub\Windows-Process-Injection\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles\remote-thread.dir\rule
+
+# Convenience name for target.
+remote-thread: CMakeFiles\remote-thread.dir\rule
+
+.PHONY : remote-thread
+
+# clean rule for target.
+CMakeFiles\remote-thread.dir\clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\remote-thread.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\remote-thread.dir\clean
+.PHONY : CMakeFiles\remote-thread.dir\clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/nabab/Documents/GitHub/Windows-Process-Injection/process-injection/remote-thread.c
+Windows.h
+-
+stdio.h
+-
+stdlib.h
+-
+

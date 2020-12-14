@@ -140,6 +140,19 @@ wts\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\wts.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\wts.dir\build
 .PHONY : wts\fast
 
+#=============================================================================
+# Target rules for targets named remote-thread
+
+# Build rule for target.
+remote-thread: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) remote-thread
+.PHONY : remote-thread
+
+# fast build rule for target.
+remote-thread\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\remote-thread.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\remote-thread.dir\build
+.PHONY : remote-thread\fast
+
 process-enumeration\toolhelp.obj: process-enumeration\toolhelp.c.obj
 
 .PHONY : process-enumeration\toolhelp.obj
@@ -194,6 +207,33 @@ process-enumeration\wts.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\wts.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\wts.dir\process-enumeration\wts.c.s
 .PHONY : process-enumeration\wts.c.s
 
+process-injection\remote-thread.obj: process-injection\remote-thread.c.obj
+
+.PHONY : process-injection\remote-thread.obj
+
+# target to build an object file
+process-injection\remote-thread.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\remote-thread.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\remote-thread.dir\process-injection\remote-thread.c.obj
+.PHONY : process-injection\remote-thread.c.obj
+
+process-injection\remote-thread.i: process-injection\remote-thread.c.i
+
+.PHONY : process-injection\remote-thread.i
+
+# target to preprocess a source file
+process-injection\remote-thread.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\remote-thread.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\remote-thread.dir\process-injection\remote-thread.c.i
+.PHONY : process-injection\remote-thread.c.i
+
+process-injection\remote-thread.s: process-injection\remote-thread.c.s
+
+.PHONY : process-injection\remote-thread.s
+
+# target to generate assembly for a file
+process-injection\remote-thread.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\remote-thread.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\remote-thread.dir\process-injection\remote-thread.c.s
+.PHONY : process-injection\remote-thread.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -202,6 +242,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... remote-thread
 	@echo ... toolhelp
 	@echo ... wts
 	@echo ... process-enumeration/toolhelp.obj
@@ -210,6 +251,9 @@ help:
 	@echo ... process-enumeration/wts.obj
 	@echo ... process-enumeration/wts.i
 	@echo ... process-enumeration/wts.s
+	@echo ... process-injection/remote-thread.obj
+	@echo ... process-injection/remote-thread.i
+	@echo ... process-injection/remote-thread.s
 .PHONY : help
 
 
