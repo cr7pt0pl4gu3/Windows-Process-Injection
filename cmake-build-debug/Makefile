@@ -60,17 +60,6 @@ CMAKE_BINARY_DIR = C:\Users\nabab\Documents\GitHub\Windows-Process-Injection\cma
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	echo >nul && "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache\fast: edit_cache
-
-.PHONY : edit_cache\fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -81,6 +70,17 @@ rebuild_cache:
 rebuild_cache\fast: rebuild_cache
 
 .PHONY : rebuild_cache\fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache\fast: edit_cache
+
+.PHONY : edit_cache\fast
 
 # The main all target
 all: cmake_check_build_system
@@ -153,6 +153,19 @@ remote-thread\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\remote-thread.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\remote-thread.dir\build
 .PHONY : remote-thread\fast
 
+#=============================================================================
+# Target rules for targets named apc
+
+# Build rule for target.
+apc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) apc
+.PHONY : apc
+
+# fast build rule for target.
+apc\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\apc.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\apc.dir\build
+.PHONY : apc\fast
+
 process-enumeration\toolhelp.obj: process-enumeration\toolhelp.c.obj
 
 .PHONY : process-enumeration\toolhelp.obj
@@ -207,6 +220,33 @@ process-enumeration\wts.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\wts.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\wts.dir\process-enumeration\wts.c.s
 .PHONY : process-enumeration\wts.c.s
 
+process-injection\apc.obj: process-injection\apc.cpp.obj
+
+.PHONY : process-injection\apc.obj
+
+# target to build an object file
+process-injection\apc.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\apc.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\apc.dir\process-injection\apc.cpp.obj
+.PHONY : process-injection\apc.cpp.obj
+
+process-injection\apc.i: process-injection\apc.cpp.i
+
+.PHONY : process-injection\apc.i
+
+# target to preprocess a source file
+process-injection\apc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\apc.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\apc.dir\process-injection\apc.cpp.i
+.PHONY : process-injection\apc.cpp.i
+
+process-injection\apc.s: process-injection\apc.cpp.s
+
+.PHONY : process-injection\apc.s
+
+# target to generate assembly for a file
+process-injection\apc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\apc.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\apc.dir\process-injection\apc.cpp.s
+.PHONY : process-injection\apc.cpp.s
+
 process-injection\remote-thread.obj: process-injection\remote-thread.c.obj
 
 .PHONY : process-injection\remote-thread.obj
@@ -242,6 +282,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... apc
 	@echo ... remote-thread
 	@echo ... toolhelp
 	@echo ... wts
@@ -251,6 +292,9 @@ help:
 	@echo ... process-enumeration/wts.obj
 	@echo ... process-enumeration/wts.i
 	@echo ... process-enumeration/wts.s
+	@echo ... process-injection/apc.obj
+	@echo ... process-injection/apc.i
+	@echo ... process-injection/apc.s
 	@echo ... process-injection/remote-thread.obj
 	@echo ... process-injection/remote-thread.i
 	@echo ... process-injection/remote-thread.s
