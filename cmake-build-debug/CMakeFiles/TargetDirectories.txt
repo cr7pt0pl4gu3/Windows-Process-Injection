@@ -1,6 +1,0 @@
-C:/Users/nabab/Documents/GitHub/Windows-Process-Injection/cmake-build-debug/CMakeFiles/toolhelp.dir
-C:/Users/nabab/Documents/GitHub/Windows-Process-Injection/cmake-build-debug/CMakeFiles/wts.dir
-C:/Users/nabab/Documents/GitHub/Windows-Process-Injection/cmake-build-debug/CMakeFiles/remote-thread.dir
-C:/Users/nabab/Documents/GitHub/Windows-Process-Injection/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/nabab/Documents/GitHub/Windows-Process-Injection/cmake-build-debug/CMakeFiles/apc.dir
-C:/Users/nabab/Documents/GitHub/Windows-Process-Injection/cmake-build-debug/CMakeFiles/edit_cache.dir
